@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
   width: 100vw;
   height: auto;
   min-height: 100vh;
@@ -41,11 +41,11 @@
 }
 
 .header-panel-1 img {
-  width: 50px;
+  width: 100px;
 }
 
 .dashboard-panel {
-  width: 50%;
+  width: 70%;
   height: auto;
   min-height: calc(100vh - 75px);
   background-color: #e5f4ec;
@@ -73,6 +73,12 @@ h1 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+
+a h1 {
+  color: white;
+  font-size: 44px;
+}
+
 .dashboard-header {
   display: flex;
   justify-content: space-between;
@@ -84,23 +90,26 @@ h1 {
   font-family: Arial;
 }
 
-.btn {
+.btn,
+a btn {
   margin: 20px;
   background-color: #8aea92;
   width: auto;
   min-width: 5em;
   height: 30px;
   /* border-radius: 0.5em; */
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 700;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   /* font: 400 13px Arial; */
-  font-size: 1.5em;
+  font-size: 24px;
   align-content: center;
-  border-radius: 0.5em;
+  border-radius: 0.2em;
+  padding: 4px;
 }
 .house-block {
   display: flex;
@@ -111,12 +120,47 @@ h1 {
   margin: 2%;
   background-color: #dedede;
   height: 100%;
+  /* width: 85%; */
 }
-.house-detail {
+
+.house-img {
+  width: 30%;
+  height: 100%;
+  padding: 5px;
+}
+
+.house-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.house-rental p {
+  margin: 0%;
+  padding: 0%;
+  height: auto;
+}
+
+.house-detail,
+.house-rental {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  width: 45%;
+  padding-left: 20px;
+}
+
+.house-rental {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: auto;
+  height: 100%;
+  width: 25%;
+  font-size: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .house-detail p {
@@ -130,11 +174,12 @@ h1 {
   align-items: center;
   justify-content: center;
   font-size: 20px;
+  width: auto;
 }
 
 .add-house-panel {
   display: flex;
-  justify-content: ;
+  justify-content: center;
 }
 
 .wizard-panel {
@@ -159,8 +204,8 @@ h1 {
 .btn-cancel {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  color: black;
+  justify-content: center;
+  color: white;
 }
 
 .create-panel {
@@ -170,6 +215,7 @@ h1 {
   justify-content: center;
   align-items: center;
   margin-bottom: 10%;
+  min-height: 40vh;
 }
 
 .input-box {
@@ -209,7 +255,8 @@ input {
 }
 .submit-panel {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   margin: 0%;
 }
@@ -234,4 +281,76 @@ input {
   color: yellow;
   font-size: 1em;
   border: none;
+}
+
+.review-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 95%;
+  height: 100%;
+  background-color: #afd4c0;
+  border-radius: 0.4em;
+  padding: 1%;
+}
+
+.review-box-c1 {
+  display: flex;
+  background-color: #afd4c0;
+  /* border: 1px solid black; */
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 50%;
+  min-height: 40vh;
+}
+
+.review-box-c2 {
+  width: 50%;
+  display: flex;
+}
+
+.review-box-l1 {
+  display: flex;
+  justify-content: flex-start;
+  height: auto;
+  /* min-height: 5vh; */
+  width: 100%;
+  font-size: 24px;
+  align-content: center;
+  padding: 0.2em;
+  min-height: 2em;
+}
+
+.label-text {
+  display: inline;
+  justify-content: flex-start;
+  font: 700;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 800;
+  min-width: 40%;
+}
+
+.review-box-l2 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+.review-box-l21 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: baseline;
+  min-width: 30%;
+  /* height: 200%; */
+}
+
+.address-display {
+  /* max-height: 2.5vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }

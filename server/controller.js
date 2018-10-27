@@ -5,6 +5,8 @@ module.exports = {
     dbInstance
       .read_houses()
       .then(houses => {
+        console.log("read", houses);
+
         res.status(200).send(houses);
       })
       .catch(error => {
@@ -13,10 +15,28 @@ module.exports = {
   },
   createHouse: (req, res, next) => {
     const dbInstance = req.app.get("db");
-    const { property_name, address, city, state, zip_code, img } = req.body;
+    const {
+      property_name,
+      address,
+      city,
+      state,
+      zip_code,
+      img,
+      monthlyMortgage,
+      desiredRent
+    } = req.body;
     console.log("Inside POST", req.body);
     dbInstance
-      .create_house([property_name, address, city, state, zip_code, img])
+      .create_house([
+        property_name,
+        address,
+        city,
+        state,
+        zip_code,
+        img,
+        monthlyMortgage,
+        desiredRent
+      ])
       .then(() => {
         console.log("After Write");
         dbInstance
@@ -30,7 +50,8 @@ module.exports = {
           });
       })
       .catch(error => {
-        res.status(500).send();
+        console.log("Error in write", error);
+        res.status(500).send(error);
       });
   },
   deleteHouse: (req, res, next) => {

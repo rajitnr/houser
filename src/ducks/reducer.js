@@ -6,8 +6,10 @@ const initialState = {
   address: "",
   city: "",
   state: "",
-  zip_code: 0,
-  img: ""
+  zip_code: "",
+  img: "",
+  monthlyMortgage: 0,
+  desiredRent: 0
 };
 
 const initialProductList = [];
@@ -19,52 +21,60 @@ const UPDATE_CITY = "UPDATE_CITY";
 const UPDATE_STATE = "UPDATE_STATE";
 const UPDATE_ZIP_CODE = "UPDATE_ZIP_CODE";
 const UPDATE_IMG = "UPDATE_IMG";
+const UPDATE_MONTHLY_MORTGAGE = "UPDATE_MONTHLY_MORTGAGE";
+const UPDATE_DESIRED_RENT = "UPDATE_DESIRED_RENT";
 
 export function updatePropertyName(propertyName) {
-  console.log("Reducer Action", UPDATE_PROPERTY_NAME);
   return {
     type: UPDATE_PROPERTY_NAME,
     payload: propertyName
   };
 }
 export function updateAddress(address) {
-  console.log("Reducer Action", UPDATE_ADDRESS);
   return {
     type: UPDATE_ADDRESS,
     payload: address
   };
 }
 export function updateCity(city) {
-  console.log("Reducer Action", UPDATE_CITY);
   return {
     type: UPDATE_CITY,
     payload: city
   };
 }
 export function updateState(state) {
-  console.log("Reducer Action", UPDATE_STATE);
   return {
     type: UPDATE_STATE,
     payload: state
   };
 }
 export function updateZipCode(zipCode) {
-  console.log("Reducer Action", UPDATE_ZIP_CODE);
   return {
     type: UPDATE_ZIP_CODE,
     payload: zipCode
   };
 }
 export function updateImg(img) {
-  console.log("Reducer Action", UPDATE_IMG);
   return {
     type: UPDATE_IMG,
     payload: img
   };
 }
 
-export function updateHouseList(houseList) {
-  console.log("Reducer action");
+export function updateHouseList(houseList) {}
+
+export function updateMonthlyMortgage(monthlyMortgage) {
+  return {
+    type: UPDATE_MONTHLY_MORTGAGE,
+    payload: monthlyMortgage
+  };
+}
+
+export function updateDesiredRent(desiredRent) {
+  return {
+    type: UPDATE_DESIRED_RENT,
+    payload: desiredRent
+  };
 }
 
 const reducer = (state = initialState, action) => {
@@ -72,7 +82,7 @@ const reducer = (state = initialState, action) => {
     case UPDATE_PROPERTY_NAME:
       return {
         ...state,
-        propertyName: action.payload
+        property_name: action.payload
       };
     case UPDATE_ADDRESS:
       return {
@@ -92,12 +102,22 @@ const reducer = (state = initialState, action) => {
     case UPDATE_ZIP_CODE:
       return {
         ...state,
-        zipCode: action.payload
+        zip_code: action.payload
       };
     case UPDATE_IMG:
       return {
         ...state,
         img: action.payload
+      };
+    case UPDATE_MONTHLY_MORTGAGE:
+      return {
+        ...state,
+        monthlyMortgage: action.payload
+      };
+    case UPDATE_DESIRED_RENT:
+      return {
+        ...state,
+        desiredRent: action.payload
       };
 
     default:

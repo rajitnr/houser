@@ -9,7 +9,7 @@ const Header = props => {
       <div className="header-panel-1">
         <Link to="/">
           <img
-            src="https://via.placeholder.com/50x50"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3qUzJKcFx52aqPln9RUJ87CcuCt4C-bPcTf3LNluF-9bm9Kpb"
             alt=""
             className="logo"
           />

@@ -9,8 +9,9 @@ const bc = require("./controller.js");
 const app = express();
 massive(process.env.CONNECTION_STRING).then(dbInstance => {
   app.set("db", dbInstance);
+  // dbInstance.setup().then(response => console.log({ response }));
   //   dbInstance.insert_one().then(response => console.log({ response }));
-  dbInstance.read_houses().then(response => console.log("response", response));
+  //   dbInstance.read_houses().then(response => console.log("response", response));
   //   console.log("Table created");
 });
 

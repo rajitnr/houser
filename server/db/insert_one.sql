@@ -1,4 +1,4 @@
-insert into house (property_name, address, city, state, zip_code, img) values 
+insert into house ("property_name", "address", "city", "state", "zip_code", "img") values 
 ('Test Property',
     'Address Line Details',
     'City Name', 

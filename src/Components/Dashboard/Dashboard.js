@@ -26,19 +26,23 @@ class Dashboard extends Component {
   };
   render() {
     let { houses } = this.state;
+    console.log("Dashboard", this.state);
+
     return (
       <div className="dashboard-panel">
         <div className="dashboard-header">
           <Link to="/">
             <div className="dashboard-text">Dashboard</div>
           </Link>
-          <Link to="/wizard">
-            <div className="btn btn-primary">Add New Property</div>
+          <Link to="/wizard/step1">
+            <div className="btn btn-primary">Add New</div>
           </Link>
         </div>
         <div className="houses-panel">
           <h1>Home Listings</h1>
           {houses.map(house => {
+            console.log("house", house);
+
             return (
               <House
                 key={house.id}
